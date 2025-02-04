@@ -2,9 +2,17 @@
 
 <%= render @contact %>
 
-<div>
-  <%= link_to "Edit this contact", edit_contact_path(@contact) %> |
-  <%= link_to "Back to contacts", contacts_path %>
+<%= button_to "Edit this contact", 
+  edit_contact_path(@contact),
+  method: :get, 
+  class:"btn btn-secondary btn-sm" %>
 
-  <%= button_to "Destroy this contact", @contact, method: :delete %>
-</div>
+<%= button_to "Back to contacts",
+  contacts_path,
+  method: :get,
+  class:"btn btn-secondary btn-sm" %>
+
+<%= button_to "Destroy this contact",
+  @contact,
+  method: :delete,
+  class:"btn btn-secondary btn-sm"%>
