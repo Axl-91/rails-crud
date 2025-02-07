@@ -2,10 +2,12 @@ require "test_helper"
 
 class ContactsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @contact = contacts(:one)
+    sign_in users(:admin)
+    @contact = contacts(:admin)
   end
 
   test "should get index" do
+    get new_user_session_url(@user)
     get contacts_url
     assert_response :success
   end

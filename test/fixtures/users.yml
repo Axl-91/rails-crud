@@ -11,3 +11,9 @@ one:
 two:
   email: email2@gmail.com
   encrypted_password: 1234
+
+admin:
+  id: 12
+  email: 'admin@example.com'
+  encrypted_password: 1234 %>
+
