@@ -2,7 +2,8 @@ require "application_system_test_case"
 
 class ContactsTest < ApplicationSystemTestCase
   setup do
-    @contact = contacts(:one)
+    sign_in users(:admin)
+    @contact = contacts(:admin)
   end
 
   test "visiting the index" do
