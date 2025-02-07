@@ -6,7 +6,7 @@
   display: inline;
 }
 
-.blue th {
+.header th {
   background-color: blueviolet !important;
   color: white !important;
 }
