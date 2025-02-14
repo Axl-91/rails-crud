@@ -3,12 +3,12 @@
   <h3 class="py-2"> This page is a testground for rails </h3>
 
   <div class="pt-4 pb-3">
-    <%= button_to "Create new contact", 
+    <%= button_to "Create contact", 
       new_contact_path(@contact),
       method: :get, 
       class:"btn btn-success" %>
 
-    <%= button_to "Show all contacts",
+    <%= button_to "List of contacts",
       contacts_path,
       method: :get,
       class:"btn btn-success" %>

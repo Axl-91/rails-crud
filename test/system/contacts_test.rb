@@ -22,12 +22,12 @@ class ContactsTest < ApplicationSystemTestCase
     click_on "Create Contact"
 
     assert_text "Contact was successfully created"
-    click_on "Back"
+    click_on "Show Contacts"
   end
 
   test "should update Contact" do
     visit contact_url(@contact)
-    click_on "Edit this contact", match: :first
+    click_on "Edit", match: :prefer_exact
 
     fill_in "Age", with: @contact.age
     fill_in "Email", with: @contact.email
@@ -36,12 +36,12 @@ class ContactsTest < ApplicationSystemTestCase
     click_on "Update Contact"
 
     assert_text "Contact was successfully updated"
-    click_on "Back"
+    click_on "Show Contacts"
   end
 
   test "should destroy Contact" do
     visit contact_url(@contact)
-    click_on "Destroy this contact", match: :first
+    click_on "Delete", match: :first
 
     assert_text "Contact was successfully destroyed"
   end
