@@ -6,7 +6,7 @@ import "bootstrap"
 import "controllers"
 
 document.addEventListener('turbo:load', function() {
-  var dropdowns = document.querySelectorAll('.dropdown-toggle');
+  let dropdowns = document.querySelectorAll('.dropdown-toggle');
   dropdowns.forEach(function(dropdown) {
     new bootstrap.Dropdown(dropdown);  // Reinitialize Bootstrap Dropdowns
   });
