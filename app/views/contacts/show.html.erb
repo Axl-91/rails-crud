@@ -3,15 +3,9 @@
 
   <%= render @contact %>
 
-  <div class="pt-4 pb-3">
-    <%= button_to "Edit", 
-      edit_contact_path(@contact),
-      method: :get, 
-      class:"btn btn-primary" %>
+    <div class="pt-4 pb-3">
+      <%= button_to "Edit" , edit_contact_path(@contact), method: :get, class:"btn btn-primary" %>
 
-    <%= button_to "Delete",
-    @contact,
-      method: :delete,
-      class:"btn btn-danger"%>
-  </div>
+      <%= button_to "Delete" , @contact, method: :delete, class:"btn btn-danger" %>
+    </div>
 </div>
