@@ -1,13 +1,16 @@
 <% content_for :title, "Contacts" %>
 
-  <h1>Contacts</h1>
-  <h4>
-    <%= current_user.email %>
-  </h4>
+  <div class="d-flex justify-content-between align-items-center">
+    <h1>Contacts</h1>
 
-  <div class="py-3">
     <%= link_to "New contact" , new_contact_path, class:"btn btn-primary" %>
   </div>
+
+  <% if @contacts.size == 0 %>
+
+    <p class="container text-center"> There are no contacts yet. </p>
+
+  <% else %>
 
   <div class="rounded-top overflow-hidden">
     <table class="table table-hover table-bordered">
@@ -42,3 +45,5 @@
       </tbody>
     </table>
   </div>
+
+  <% end %>
